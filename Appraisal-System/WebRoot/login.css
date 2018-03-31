@@ -1,0 +1,66 @@
+	body{
+		margin:0;
+		background-image:url("background1.jpeg");
+		background-repeat:No-repeat;
+		background-size:100%;
+	}
+	.header {
+		margin:0px;
+		padding-top:10px;
+		border-bottom: 1px solid #e2e2e2;
+		height:35px;
+		position: relative;
+		background-color:#6E7173;
+		text-align:left;
+		font-size:20px;x
+	}
+	.login_block{
+		position:absolute;
+		left:50%;
+		margin-top:50px;
+		margin-left:-125px;
+		height:150px;
+		width:230px;
+		background-color:#eee;
+		font-size:20px;
+		padding:20px;
+		border-radius:5px;
+		box-shadow:-10px 10px 10px #888888;
+	}
+	.login_form{
+		position:relative;
+		margin-top:3px;
+		height:145px;
+		width:217px;
+		float:left;
+		font-family: "Hiragino Sans GB", "Microsoft Yahei";
+	}
+	.input_username,.input_password{
+		margin-top:5px;
+		height:35px;
+		width:171px;
+		border:1px;
+		padding:6px;
+		border-radius:5px;
+	}
+	.pulldown{
+		height:32px;
+		width:172px;
+		border-radius:5px;
+		padding:6px 12px;
+	}
+	.login_button{
+		margin-top:16px;
+		margin-left:44px;
+		width:65px;
+		height:30px;
+		border-radius:16px;
+		background-color:#4DD0E1;
+		font-size:16px;
+		font-family:"Hiragino Sans GB", "Microsoft Yahei";
+		/*font-color:#ffffff;*/
+	}
+	.forgoten_link{
+		font-size:10px;
+		margin-left:15px;
+	}
