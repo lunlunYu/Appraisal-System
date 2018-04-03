@@ -18,6 +18,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="description" content="This is my page">
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="checkcode.js"></script>
 	-->
 
   </head>
@@ -28,9 +30,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
     	String p=request.getParameter("password");
     	String u=request.getParameter("username");
+    	String f=request.getParameter("checkcode");
+    	String test = request.getParameter("test");
+    	System.out.println(p);
+    	System.out.println(u);
+    	System.out.println(f);
+    	System.out.println(test);
     	DB c=new DB();
     	String s=c.userCheck(u, p);
-    	if(s.equals("1"))response.sendRedirect("dele.jsp?name="+u);
+    	if(s.equals("1") &&  f.equals(test))response.sendRedirect("dele.jsp?name="+u);
 		 
      %>
   </body>
