@@ -19,8 +19,8 @@
 		left:50%;
 		margin-top:50px;
 		margin-left:-125px;
-		height:150px;
-		width:230px;
+		height:260px;
+		width:260px;
 		background-color:#eee;
 		font-size:20px;
 		padding:20px;
@@ -30,22 +30,31 @@
 	.login_form{
 		position:relative;
 		margin-top:3px;
-		height:145px;
-		width:217px;
+		height:220px;
+		width:250px;
 		float:left;
 		font-family: "Hiragino Sans GB", "Microsoft Yahei";
 	}
 	.input_username,.input_password{
-		margin-top:5px;
+		margin-top:15px;
 		height:35px;
-		width:171px;
+		width:200px;
 		border:1px;
 		padding:6px;
 		border-radius:5px;
 	}
+	.inpue_checkcode{
+		margin-top:15px;
+		height:35px;
+		width:80px;
+		border:1px;
+		padding:6px;
+		border-radius:5px;		
+	}
+	
 	.pulldown{
-		height:32px;
-		width:172px;
+		height:35px;
+		width:200px;
 		border-radius:5px;
 		padding:6px 12px;
 	}
@@ -62,5 +71,29 @@
 	}
 	.forgoten_link{
 		font-size:10px;
-		margin-left:15px;
+		margin-left:50px;
 	}
+	
+	.add { 
+		position:absolute;
+		right:0px;
+		width: 80px; 
+		height: 35px; 
+		_display: inline; 
+		cursor: pointer; 
+		margin-top: 15px;
+		margin-left:20px; 
+	}
+	
+	.phoKey { 
+		background: #012246; 
+		text-align: center; 
+		line-height: 44px; 
+		color: #fff; 
+		border-radius: 3px;
+	}
+
+    .phoKey {
+    	letter-spacing: 3px; 
+    	font-size:18px;
+    }

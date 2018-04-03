@@ -17,6 +17,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="description" content="This is my page">
 	
 	<link rel="stylesheet" href="login.css" type="text/css"/>
+	<script type="text/javascript" src="jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="check.js"></script>
   </head>
   
 <body>
@@ -34,8 +36,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</select> <br/>
 		用户:<input type="text" name="username" class="input_username"><br/>
 		密码:<input type="password" name="password" class="input_password"><br/>
+		验证码:<input type="text" name="checkcode" class="inpue_checkcode">
+		<span class="add phoKey" id="ss" onclick="create_code()"></span>
+		<input id="test" type="hidden" name="test"><br/> 
 		<input class="login_button" type="submit" value="登录">
-		<a class="forgoten_link" href="">忘记密码</a>
+		<a href="#" class="forgoten_link" href="">忘记密码</a>
 		</form> 
 	</div>
 
