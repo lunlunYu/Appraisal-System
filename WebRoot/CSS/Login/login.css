@@ -1,5 +1,6 @@
 	body{
 		margin:0;
+		height:1500px;
 		background-image:url("../../IMAGES/background1.jpeg");
 		background-repeat:No-repeat;
 		background-size:100%;
@@ -12,13 +13,13 @@
 		position: relative;
 		background-color:#6E7173;
 		text-align:left;
-		font-size:20px;x
+		font-size:20px;
 	}
 	.login_block{
-		position:absolute;
-		left:50%;
-		margin-top:50px;
-		margin-left:-125px;
+		float:right;
+		margin-top:22px;
+		margin-right:200px;
+		z-index:2000;
 		height:260px;
 		width:260px;
 		background-color:#eee;
@@ -31,7 +32,7 @@
 		position:relative;
 		margin-top:3px;
 		height:220px;
-		width:250px;
+		width:262px;
 		float:left;
 		font-family: "Hiragino Sans GB", "Microsoft Yahei";
 	}
@@ -42,21 +43,24 @@
 		border:1px;
 		padding:6px;
 		border-radius:5px;
+		font-size: 20px;
 	}
 	.inpue_checkcode{
 		margin-top:15px;
-		height:35px;
+		height:25px;
 		width:80px;
 		border:1px;
 		padding:6px;
-		border-radius:5px;		
+		border-radius:5px;	
+		font-size:18px;	
 	}
 	
 	.pulldown{
 		height:35px;
-		width:200px;
+		width:211px;
 		border-radius:5px;
-		padding:6px 12px;
+		padding:6px 12px 6px 70px;
+		font-size: medium;
 	}
 	.login_button{
 		margin-top:16px;
@@ -70,30 +74,29 @@
 		/*font-color:#ffffff;*/
 	}
 	.forgoten_link{
-		font-size:10px;
-		margin-left:50px;
+		font-size:15px;
+		margin-left:80px;
 	}
 	
 	.add { 
 		position:absolute;
 		right:0px;
 		width: 80px; 
-		height: 35px; 
+		height: 37px; 
 		_display: inline; 
 		cursor: pointer; 
 		margin-top: 15px;
-		margin-left:20px; 
+		margin-right:6px; 
 	}
 	
 	.phoKey { 
 		background: #012246; 
 		text-align: center; 
-		line-height: 44px; 
+		line-height: 37px; 
 		color: #fff; 
 		border-radius: 3px;
+		letter-spacing: 3px; 
+    	font-size:18px;
 	}
 
-    .phoKey {
-    	letter-spacing: 3px; 
-    	font-size:18px;
-    }
+   

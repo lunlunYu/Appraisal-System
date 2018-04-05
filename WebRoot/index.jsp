@@ -4,26 +4,72 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML> 
+
 <html>
-  <head>
+<head>
     <base href="<%=basePath%>">
     
     <title>计算机科学与工程学院教师考核系统</title>
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
+	
 	
 	<link rel="stylesheet" href="./CSS/Login/login.css" type="text/css"/>
-	<script type="text/javascript" src="jquery-2.2.0.min.js"></script>
+	<link rel="stylesheet" href="./CSS/Login/background-style.css" type="text/css" />
+	
 	<script type="text/javascript" src="./JS/check.js"></script>
-  </head>
+	
+	<link rel="stylesheet" href="./CSS/Login/display-style.css" type="text/css" /> 
+
+	<script type="text/javascript" src="./JS/jquery.min.js"></script>
+	<script type="text/javascript" src="./JS/coinslider.min.js"></script> 
+	
+	
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			$("#games").coinslider({
+				hoverPause: false /*选择器id引入插件coinslider（悬停暂停：否）*/
+			});
+		});
+		
+	</script>
+	
+	<style>
+	.display{
+	float:left;
+	margin-top:20px;
+	margin-left:50px;
+	height:322px;
+	font:12px/180% Arial, Helvetica, sans-serif, "新宋体";
+	color:#63665F;
+	}
+	.abc{
+	margin:100px 0px 100px 0px;
+	height:344px;
+	background-color:rgba(149,154,143,0.7);
+	}
+	</style>
+	
+</head>
   
 <body>
+
+<header class="htmleaf-header">
 	<div class="header">
 		计算机科学与工程学院教师考核系统
+	</div>
+	<div class="abc">
+	<div class="display">
+		<div id="games"> 
+			<a href="" target="_blank">
+				<img src="./IMAGES/mini_ninjas.jpg" alt="Mini Ninjas" /> 
+				<span> <b>第一张</b><br /> 这是说明这是说明这是说明这是说明这是说明这是说明这是说明这是说明这是说明</span> 
+			</a> 				
+			<a href="" target="_blank"> 
+				<img src="./IMAGES/star_wars_the_old_republic.jpg" alt="Star Wars: The Old Republic" /> 
+				<span> <b>标题</b><br /> 这是说明这是说明这是说明这是说明这是说明这是说明这是说明这是说明这是说明</span> 
+			</a>
+		</div> 
 	</div>
 	
 	<div class="login_block">
@@ -43,6 +89,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<a href="#" class="forgoten_link" href="">忘记密码</a>
 		</form> 
 	</div>
-
+	</div>
+</header>
+	<!-- background -->
+	<!-- <script type="text/javascript" src="./JS/jquery-2.1.1.min.js"></script> -->
+	<script type="text/javascript" src="./JS/jquery.mkinfinite.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("header").mkinfinite({
+				maxZoom:       1.4,
+				animationTime: 4000,
+				imagesRatio:   (960 / 720),
+				isFixedBG:     true,
+				zoomIn:        true,
+				imagesList:    new Array(
+					'IMAGES/1.jpg',
+					'IMAGES/fbhXHkX.jpg',
+					'IMAGES/4qAcQij.jpg',
+					'IMAGES/VALX13b.jpg',
+					'IMAGES/POCVm4y.jpg',
+					'IMAGES/ixm5rIY.jpg'
+				)
+			});
+			
+		});
+	</script>
+	<!-- background -->
 </body>
 </html>
