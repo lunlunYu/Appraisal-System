@@ -54,7 +54,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
 <body>
 
-<header class="htmleaf-header">
+<!-- <header class="htmleaf-header"> -->
 	<div class="header">
 		计算机科学与工程学院教师考核系统
 	</div>
@@ -62,12 +62,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div class="display">
 		<div id="games"> 
 			<a href="" target="_blank">
-				<img src="./IMAGES/mini_ninjas.jpg" alt="Mini Ninjas" /> 
-				<span> <b>第一张</b><br /> 这是说明这是说明这是说明这是说明这是说明这是说明这是说明这是说明这是说明</span> 
+				<img src="./IMAGES/CSE.jpg" alt="Mini Ninjas" /> 
+				<span> <b>计算机科学与工程学院</b><br /> SCHOOL OF COMPUTER SCIENCE AND ENGINEERING</span> 
 			</a> 				
 			<a href="" target="_blank"> 
-				<img src="./IMAGES/star_wars_the_old_republic.jpg" alt="Star Wars: The Old Republic" /> 
-				<span> <b>标题</b><br /> 这是说明这是说明这是说明这是说明这是说明这是说明这是说明这是说明这是说明</span> 
+				<img src="./IMAGES/dog.jpg" alt="Star Wars: The Old Republic" /> 
+				<span> <b>Play with Snow</b><br /> dogdogdogdogdog...</span> 
 			</a>
 		</div> 
 	</div>
@@ -90,25 +90,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</form> 
 	</div>
 	</div>
-</header>
+<!-- </header> -->
 	<!-- background -->
 	<!-- <script type="text/javascript" src="./JS/jquery-2.1.1.min.js"></script> -->
 	<script type="text/javascript" src="./JS/jquery.mkinfinite.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$("header").mkinfinite({
+			$("body").mkinfinite({
 				maxZoom:       1.4,
 				animationTime: 4000,
-				imagesRatio:   (960 / 720),
+				//imagesRatio:   (960 / 720),
+				imagesRatio:   (1080 / 1920),
 				isFixedBG:     true,
 				zoomIn:        true,
 				imagesList:    new Array(
-					'IMAGES/1.jpg',
-					'IMAGES/fbhXHkX.jpg',
-					'IMAGES/4qAcQij.jpg',
-					'IMAGES/VALX13b.jpg',
-					'IMAGES/POCVm4y.jpg',
-					'IMAGES/ixm5rIY.jpg'
+					'IMAGES/bg1.jpg',
+					'IMAGES/bg2.jpg',
+					'IMAGES/bg3.jpg',
+					'IMAGES/bg4.jpg'
 				)
 			});
 			

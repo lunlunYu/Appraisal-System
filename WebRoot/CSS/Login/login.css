@@ -1,9 +1,9 @@
 	body{
-		margin:0;
-		height:1500px;
+		height:100%;
 		background-image:url("../../IMAGES/background1.jpeg");
 		background-repeat:No-repeat;
-		background-size:100%;
+		background-size:cover;
+		background-color:#959A8F;
 	}
 	.header {
 		margin:0px;
