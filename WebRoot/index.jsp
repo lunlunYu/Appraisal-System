@@ -11,20 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
     
     <title>计算机科学与工程学院教师考核系统</title>
-<<<<<<< HEAD
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	
-	<link rel="stylesheet" href="login.css" type="text/css"/>
-	<script type="text/javascript" src="jquery-2.2.0.min.js"></script>
-	<script type="text/javascript" src="check.js"></script>
-  </head>
-=======
-	
-	
+
 	<link rel="stylesheet" href="./CSS/Login/login.css" type="text/css"/>
 	<link rel="stylesheet" href="./CSS/Login/background-style.css" type="text/css" />
 	
@@ -63,7 +50,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</style>
 	
 </head>
->>>>>>> remotes/origin/branch-test
   
 <body>
 
