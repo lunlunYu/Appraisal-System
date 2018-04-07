@@ -5,6 +5,21 @@
 		background-size:cover;
 		background-color:#959A8F;
 	}
+	
+	.display{
+	float:left;
+	margin-top:20px;
+	margin-left:50px;
+	height:322px;
+	font:12px/180% Arial, Helvetica, sans-serif, "ÐÂËÎÌå";
+	color:#63665F;
+	}
+	.block{
+	margin:100px 0px 100px 0px;
+	height:344px;
+	background-color:rgba(149,154,143,0.7);
+	}
+	
 	.header {
 		margin:0px;
 		padding-top:10px;
@@ -98,5 +113,7 @@
 		letter-spacing: 3px; 
     	font-size:18px;
 	}
+	
+	
 
    
