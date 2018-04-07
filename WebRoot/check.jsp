@@ -77,13 +77,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	System.out.println(f);
     	System.out.println(test);
 
-
-
-
-    	DB c=new DB();
-    	String s=c.userCheck(u, p);
-    	if(s.equals("1") &&  f.equals(test))response.sendRedirect("dele.jsp?name="+u);
-		 
      %>
   </body>
 </html>
