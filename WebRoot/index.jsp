@@ -60,14 +60,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				maxZoom:       1.4,
 				animationTime: 4000,
 				//imagesRatio:   (960 / 720),
-				imagesRatio:   (1080 / 1920),
+				imagesRatio:   (1920 / 1080),
 				isFixedBG:     true,
 				zoomIn:        true,
 				imagesList:    new Array(
-					'IMAGES/bg1.jpg',
-					'IMAGES/bg2.jpg',
-					'IMAGES/bg3.jpg',
-					'IMAGES/bg4.jpg'
+					'IMAGES/bg5.jpg',
+					'IMAGES/bg6.jpg',
+					'IMAGES/bg7.jpg',
+					'IMAGES/bg8.jpg'
 				)
 			});
 
