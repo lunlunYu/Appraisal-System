@@ -41,7 +41,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 	<script type="text/javascript" src="error.js"></script>
-
+	<link rel="stylesheet" href="alert.css" type="text/css"/>
 
 
 	<!-- background -->
@@ -101,50 +101,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		
 		<div class="login_block">
-			<form action="check.jsp" method="post" class="login_form">
+			<form action="check.jsp" method="post" class="login_form" id="form1">
 			类型:<select class="pulldown" name="usertype"> 
 			<option value="0">教职工</option> 
 			<option value="1">审核员</option>
 			<option value="2">管理员</option> 		
 			</select> <br/>
-			用户:<input type="text" name="username" class="input_username"><br/>
-			密码:<input type="password" name="password" class="input_password"><br/>
-			验证码:<input type="text" name="checkcode" class="inpue_checkcode">
+			用户:<input type="text" name="username" class="input_username" required><br/>
+			密码:<input type="password" name="password" class="input_password" required><br/>
+			<input id="test" type="hidden" name="test">
+			验证码:<input type="text" name="checkcode" class="inpue_checkcode" required>
 			<span class="add phoKey" id="ss" onclick="create_code()"></span>
-
-
-			<input id="test" type="hidden" name="test"><br/> 
+			<br/> 
 
 
 			<input class="login_button" type="submit" value="登录">
-			<a href="#" class="forgoten_link" href="">忘记密码</a>
+			<a href="dele.jsp" class="forgoten_link" href="">忘记密码</a>
 			</form> 
 		</div>
 	</div>
 <!-- </header> -->
-
-</body>
-</html>
-
-
-
+<div id="dialog" title="基本的对话框">  </div>
 <script>
 $(document).ready(function error(){
 	var errori ='<%=request.getParameter("error")%>';
-	if(errori==1){
-		alert("验证码不能为空！！");
-	}
-	else if(errori==2){
-		alert("验证码错误！！");
-	}
-	else if(errori==3){
-		alert("用户名不能为空！！");
-	}
-	else if(errori==4){
-		alert("密码不能为空！！");
+	if(errori==2){
+    	//$( "#dialog" ).dlog({ height: 140,modal: true});
+      	//$().ready(alert("验证码错误！！"));
 	}
 	else if(errori==5){
-		alert("账号密码错误！！");
+		//alert("账号密码错误！！");
 	}
 });
 </script>

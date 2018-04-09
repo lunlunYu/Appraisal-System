@@ -80,9 +80,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 
-    	DB c=new DB();
-    	String s=c.userCheck(u, p);
-    	if(s.equals("1") &&  f.equals(test))response.sendRedirect("dele.jsp?name="+u);
 		 
      %>
   </body>
