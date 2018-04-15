@@ -4,3 +4,7 @@
 	font-size:20px;
 	color:red;
 }
+
+#dialog1 {
+	z-index:1000;
+}

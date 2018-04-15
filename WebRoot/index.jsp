@@ -27,7 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!-- display -->
 	<link rel="stylesheet" href="./CSS/Login/display-style.css" type="text/css" /> 
 	
-	<script type="text/javascript" src="./JS/jquery.min.js"></script>
+	<!--  <script type="text/javascript" src="./JS/jquery.min.js"></script>-->
 
 
 
@@ -77,7 +77,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 		});
 		
+		
 	</script>
+
+
 
 </head>
   
@@ -124,20 +127,32 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 	</div>
 <!-- </header> -->
-<div id="dialog" title="错误提示框">
+<div id="dialog1" title="错误提示框">
   <p id="p1"></p>
 </div>
 <script>
-
+		 $(function() {
+    $( "#dialog1" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+  });
 $(document).ready(function error(){
 	var errori ='<%=request.getParameter("error")%>';
 	if(errori==2){
-    		$( "#dialog" ).dialog();
+    		$("#dialog1").dialog("open");
     		document.getElementById("p1").innerHTML="验证码错误！！！";
 	}
 	else if(errori==5){
-			document.getElementById("p1").innerHTML="账号密码错误错误！！！";
-			$( "#dialog" ).dialog();
+			document.getElementById("p1").innerHTML="账号密码错误！！！";
+			$( "#dialog1" ).dialog("open");
 	}
 });
 </script>
