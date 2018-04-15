@@ -12,6 +12,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <title>计算机科学与工程学院教师考核系统</title>
 	
+	<link rel="stylesheet" href="2.css" type="text/css">
+    <link rel="stylesheet" href="3.css" type="text/css">
+    <script type="text/javascript" src="1.js"></script>
+    <script type="text/javascript" src="2.js"></script>
 	
 	<link rel="stylesheet" href="./CSS/Login/login.css" type="text/css"/>
 	
@@ -74,7 +78,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		});
 		
 	</script>
-	
 
 </head>
   
@@ -121,16 +124,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 	</div>
 <!-- </header> -->
-<div id="dialog" title="基本的对话框">  </div>
+<div id="dialog" title="错误提示框">
+  <p id="p1"></p>
+</div>
 <script>
+
 $(document).ready(function error(){
 	var errori ='<%=request.getParameter("error")%>';
 	if(errori==2){
-    	//$( "#dialog" ).dlog({ height: 140,modal: true});
-      	//$().ready(alert("验证码错误！！"));
+    		$( "#dialog" ).dialog();
+    		document.getElementById("p1").innerHTML="验证码错误！！！";
 	}
 	else if(errori==5){
-		//alert("账号密码错误！！");
+			document.getElementById("p1").innerHTML="账号密码错误错误！！！";
+			$( "#dialog" ).dialog();
 	}
 });
 </script>
