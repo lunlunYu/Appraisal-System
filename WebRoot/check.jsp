@@ -33,7 +33,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	int error=0;
 		int vitalnum = 0;
 
-
+		
     	String p=request.getParameter("password");
     	String u=request.getParameter("username");
     	String f=request.getParameter("checkcode");
@@ -61,9 +61,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	}
     	else{
     		DB c=new DB();
+    		/*没有验证用户类型！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！*/
     		String s=c.userCheck(u, p);
     		if(s.equals("1") &&  f.equals(test) && vitalnum==0){
-    			response.sendRedirect("dele.jsp?name="+u);
+    			response.sendRedirect("TeacherHomepage.jsp?name="+u);
     		}
     		else {
     			response.sendRedirect("index.jsp?error=5");
@@ -71,11 +72,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		}
     	}
 
-
+		/*
     	System.out.println(p);
     	System.out.println(u);
     	System.out.println(f);
     	System.out.println(test);
+		*/
 
      %>
   </body>
