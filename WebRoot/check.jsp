@@ -78,9 +78,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	System.out.println(test);
 
 
-
-
-		 
      %>
   </body>
 </html>
