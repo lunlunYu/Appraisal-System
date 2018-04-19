@@ -16,17 +16,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" href="./CSS/Login_alert/3.css" type="text/css">
     <script type="text/javascript" src="./JS/login_alert_1.js"></script>
     <script type="text/javascript" src="./JS/login_alert_2.js"></script>
+
 	
 	<link rel="stylesheet" href="./CSS/Login/login.css" type="text/css"/>
 	
 	<script type="text/javascript" src="./JS/check.js"></script>
 
-
 	<!-- display -->
 	<link rel="stylesheet" href="./CSS/Login/display-style.css" type="text/css" /> 
 	
 	<!--  <script type="text/javascript" src="./JS/jquery.min.js"></script>-->
+
 	<script type="text/javascript" src="./JS/coinslider.min.js"></script>
+
 	<!-- display -->
 	
 	<!-- background -->
@@ -35,6 +37,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script type="text/javascript" src="./JS/jquery.mkinfinite.js"></script>
 	
 	<!-- background -->
+
 
 </head>
   
@@ -85,6 +88,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <p id="p1"></p>
 </div>
 <script>
+
 	$(document).ready(function(){
 	
 		/*display*/
