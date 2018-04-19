@@ -23,7 +23,38 @@ $(document).ready(function create_code() {
 
 
 }); 
-	
 
+
+$().ready(function() {
+	  $("#form1").validate({
+	    rules: {
+	      username: {
+	        required: true,
+	        maxlength: 10
+	      },
+	      password: {
+	        required: true,
+	        maxlength: 10
+	      },
+	      checkcode: {
+	        required: true,
+	        maxlength: 10,
+	      }
+	    },
+	    messages: {
+	      username: {
+	        required: "请输入用户名",
+	        minlength: "用户名必需由10个字母组成"
+	      },
+	      password: {
+	        required: "请输入密码",
+	        minlength: "密码长度不能小于 10 个字母"
+	      },
+	      checkcode: {
+	        required: "请输入验证码",
+	        minlength: "密码长度不能小于 10 个字母",
+	      }
+	    }
+	})});
 
 
