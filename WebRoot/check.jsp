@@ -64,7 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		/*没有验证用户类型！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！*/
     		String s=c.userCheck(u, p);
     		if(s.equals("1") &&  f.equals(test) && vitalnum==0){
-    			response.sendRedirect("TeacherHomepage.jsp?name="+u);
+    			response.sendRedirect("./Page/Teacher/TeacherHomepage.jsp?name="+u);
     		}
     		else {
     			response.sendRedirect("index.jsp?error=5");
