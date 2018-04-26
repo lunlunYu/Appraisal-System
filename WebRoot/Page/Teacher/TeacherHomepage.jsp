@@ -13,6 +13,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+	
 	<link href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet">
 	
 	<!-- treeview 
@@ -26,133 +27,54 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	 
 	<!-- 可选的Bootstrap主题文件（一般不使用） -->
-	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">var a = $.noConflict(true);</script>
 	 
 	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js">var b = $.noConflict(true);</script>
 	 
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js">var c = $.noConflict(true);</script>
 
-	<!-- <link rel="stylesheet" href="./TeaHom.css" type="text/css"/> -->
+	<link rel="stylesheet" href="./Page/Teacher/TeaHom.css" type="text/css"/>
 	
-	<style>
 	
-	html,body{
-	margin:0;
-	height:100%;
-	}
-	header.container{
-	margin:0;
-	padding:0;
-	width:100%;
-	height:70px;
-	background:#9C9A9A;
-	}
-	.row{
-		margin:0;
-	}
-	.logo,.head-bar{
-	height:100%;
-	}
-	.logo{
-	padding:0;
-	background:#54F554;
-	//background-size:cover;
-	//background-repeat:No-repeat;
-	}
-	.head-bar{
-	margin:0;
-	padding:0;
-	background:#eaeaea;
-	}
 	
-	div.container{
-	margin:0;
-	padding:0;
-	width:100%;
-	height:auto;
-	background:#fff;
-	}
-	div.left-bar div.right-bar{
-	margin:0;
-	padding:0;
-	height:100%;
-	}
-	div.left-bar{
-	padding:0;
-	background:#dadcde;
-	}
-	div.right-bar{
-	padding:0;
-	background:#85bdbbc2;
-	}
-	
-	div.left-bar div.cardcase,div.tree{
-	margin:0;
-	padding:0;
-	width:100%;
-	}
-	div.left-bar div.cardcase{
-	height:200px;
-	background:#8c8c88;
-	}
-	div.left-bar div.tree{
-	//height:400px;
-	background:#7ffb7e;
-	}
-	
-	.photo{
-	float:left;
-	width:60%;
-	height:100%;
-	position:relative;
-	//background:#fff;
-	//border-width:2px;
-	//border-style:solid;
-	//border-color:#000;
-	}
-	.photo-sm{
-	margin:0;
-	width:100%;
-	height:100%;
-	//background:#fff;
-	//border-width:2px;
-	//border-style:solid;
-	//border-color:#000;
-	}
-	.infor{
-	float:right;
-	margin:0;
-	width:40%;
-	height:100%;
-	padding-left:5px;
-	//background:#fff;
-	//border-width:2px;
-	//border-style:solid;
-	//border-color:#000;
-	}
-	</style>
+	<%
+	response.setHeader("Cache-Control","no-cache"); //HTTP 1.1
+	response.setHeader("Pragma","no-cache"); //HTTP 1.0
+	response.setDateHeader ("Expires", 0); //prevents caching at the proxy server
+	%>
 	
   </head>
   
 <body>
     <header class="container">
-		<div class="row" style="height:100%;">
+		<div class="row" style="height:100%;margin:0;">
 			<div class="logo hidden-xs col-sm-2 col-md-2 col-lg-2">
 				<img src="./IMAGES/Logo.png" style="width:100%;height:100%;">
 			</div>
 			
 			<div class="head-bar col-sm-10 col-md-10 col-lg-10">
-			<a href="http://www.runoob.com/bootstrap/bootstrap-breadcrumbs.html" target="_balnk">bootstrap 面包屑导航</a>
+				<div class="row">
+					<div class="breadcrumbs col-xs-10 col-sm-10 col-md-10 col-lg-10">
+						<a href="http://www.runoob.com/bootstrap/bootstrap-breadcrumbs.html" target="_balnk">bootstrap 面包屑导航</a>
+			
+					</div>
+					
+					<div class="logout col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<a class="glyphicon glyphicon-off" href="http://localhost:8080/test/LogOut.jsp" target="_top" title="退出">LogOut</a>
+			
+					</div>
+					
+				</div>
 			</div>
 		</div>
 	</header>
 	
 	<div class="container">
-		<div class="row">
+		<div class="row" style="margin:0;">
 			<div class="left-bar col-sm-2 col-md-2 col-lg-2">
-				<div class="cardcase hidden-xs" style="height:150px;">
+				<div class="cardcase hidden-xs">
 					
 						<div class="photo visible-md visible-lg">
 							<img src="./IMAGES/photo.jpg" class="img-circle img-thumbnail">
@@ -178,11 +100,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			
 			<div class="right-bar col-sm-10 col-md-10 col-lg-10">
-				<div id="test" style="height:200px;">
+				<div id="test" style="">
 					<div id="matter0" style="display: none">
 						<!--引入外部文件，即需要在右侧加载的内容-->
 						<!-- 动态包含 -->
-						<jsp:include page="./PerInf/PersonInf.jsp"/>
+						<jsp:include page="./PerInf/MyJsp.jsp" flush="true"/>
 						
 					</div>
 
@@ -190,12 +112,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<!-- 静态包含 -->
 						<%@include file="./AchLog/AchLog.jsp"%>
 					</div>
+					
 				</div>
 			</div>
 		</div>
 	</div>
-    <script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
-	<script src="./bootstrap-treeview/js/bootstrap-treeview.js"></script>
+    
+	<script src="./bootstrap-treeview/js/bootstrap-treeview.js">var e = $.noConflict(true);</script>
     <script type="text/javascript">
         $(function () {
             var defaultData = [
@@ -210,6 +133,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	              href: '#parent2',
 				  nodeId: '1',
 				  state:{
+				  	selected:true,
 					checked:true,
 					expanded:false
 				  },
@@ -330,9 +254,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				  data: defaultData,
 			   // multiSelect: $('#chk-select-multi').is(':checked'),
 				onNodeSelected: function(event, node) {
-				var temp = "block";
-				  //$('#test').prepend('<p>' + node.Id + ' was selected</p>');
-				  //document.getElementById("matter" + node.Id).style.display = temp;
+					var temp = "block";
 					for (var i = 0; i < 2; i++) {
 						if (i == node.Id) {
 							temp = "block";
@@ -341,6 +263,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						}
 						document.getElementById("matter" + i).style.display = temp;
 					}
+					var nodearrE = $("#treeview2").treeview("getExpanded");
+					for(var i=0;i<nodearrE.length;i++){
+						var nodeid = JSON.stringify(nodearrE[i].Id);
+						var nodestate = JSON.stringify(nodearrE[i].state);
+						document.cookie = nodeid + "=" + nodestate;
+					}
+					var nodearrC = $("#treeview2").treeview("getCollapsed");
+					for(var i=0;i<nodearrC.length;i++){
+						var nodeid = JSON.stringify(nodearrC[i].Id);
+						var nodestate = JSON.stringify(nodearrC[i].state);
+						document.cookie = nodeid + "=" + nodestate;
+					}
 				},
 				/*onNodeUnselected: function (event, node) {
 				  $('#test').prepend('<p>' + node.text + ' was unselected</p>');
@@ -348,18 +282,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			  });
 			};
 			var $selectableTree = initSelectableTree();
-
-			var findSelectableNodes = function() {
-			  return $selectableTree.treeview('search', [ $('#input-select-node').val(), { ignoreCase: false, exactMatch: false } ]);
-			};
-			var selectableNodes = findSelectableNodes();
-
-			$('#chk-select-multi:checkbox').on('change', function () {
-			  console.log('multi-select change');
-			  $selectableTree = initSelectableTree();
-			  selectableNodes = findSelectableNodes();          
-			});
+			
         });
+        
+        /*$(document).ready(function(){
+    		for(var i=0;i<=17;i++){
+    			var str = getcookie(i);
+    			var statei = JSON.parse(str);
+    			var jso = eval(statei);
+    			var nodei = $('#treeview2').treeview('getNode',i);
+    			if(jso.selected) {
+    				$('#test').prepend('<p>'+ nodei.Id+ jso.selected + ' was selected</p>');
+    				//var tem = document.getElementById(nodei.Id);
+    				//$('#test').prepend('<p>' + tem.className + '</p>');
+    				//$('#treeview2').treeview('setSelectedState',[nodei,jso,{silent: true}]);
+    			}
+    			else {
+    			
+    				$('#test').prepend('<p>' + nodei.Id + jso.selected + ' was unselected</p>');
+    				
+    			
+    			}
+    			//$('#treeview2').treeview('setSelectedState',[nodei,jso,{silent: true}]);
+    			
+    		}
+    		function getcookie(objname){//获取指定名称的cookie的值
+				var arrstr = document.cookie.split("; ");
+				for(var i = 0;i < arrstr.length;i ++){
+					var temp = arrstr[i].split("=");
+					if(temp[0] == objname) return unescape(temp[1]);
+				}
+			}
+    	});*/
 		
     </script>
  </body>
